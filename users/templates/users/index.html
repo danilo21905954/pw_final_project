@@ -1,0 +1,61 @@
+{% extends 'users/base.html' %}
+
+{% block main %}
+    <!-- Fast passage   -->
+    <div class="biv-location">
+        <span>Home page</span>
+    </div>
+    <!-- Fast passage   -->
+
+    <!-- Content   -->
+    <div class="biv-panel-content">
+
+        <div class="biv-panel-tiles">
+            <div class="row">
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                    <a href="{% url 'users:testemunho' %}" class="biv-panel-tile">
+                        <div class="biv-panel-tile-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="biv-panel-tile-title">Testemunhos</div>
+                    </a>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                    <a href="{% url 'users:users' %}" class="biv-panel-tile">
+                        <div class="biv-panel-tile-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="biv-panel-tile-title">Contatos</div>
+                    </a>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                    <a href="{% url 'users:quizz' %}" class="biv-panel-tile">
+                        <div class="biv-panel-tile-icon">
+                            <i class="fas fa-question"></i>
+                        </div>
+                        <div class="biv-panel-tile-title">Quizz</div>
+                    </a>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                    <a href="{% url 'users:planos' %}" class="biv-panel-tile">
+                        <div class="biv-panel-tile-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <div class="biv-panel-tile-title">Planos</div>
+                    </a>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                    <a href="{% url 'users:statistics' %}" class="biv-panel-tile">
+                        <div class="biv-panel-tile-icon">
+                            <i class="far fa-chart-bar"></i>
+                        </div>
+                        <div class="biv-panel-tile-title">Estatísticas</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- Content   -->
+{% endblock %}

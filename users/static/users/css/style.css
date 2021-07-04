@@ -1,0 +1,401 @@
+/*
+ * © Bugaev Ivan
+ * This code is protected by copyright.
+*/
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0px 0px 0px 0px;
+  margin: 0px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #323946;
+  background-color: #ebeaec;
+}
+body.biv-background {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+a {
+  color: #337ab7;
+}
+a:hover {
+  color: #23527c;
+}
+
+::-webkit-input-placeholder {
+  color: #000;
+}
+::-moz-placeholder {
+  color: #000;
+}
+:-moz-placeholder {
+  color: #000;
+}
+:-ms-input-placeholder {
+  color: #000;
+}
+
+.row {
+  margin-bottom: -4px;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+.display-none {
+  display: none;
+}
+body.biv-background {
+  background-position: center center;
+  background-size: cover;
+}
+.biv-panel {
+  display: inline-block;
+  width: 100%;
+}
+@media (min-width:992px){
+  .biv-panel {
+    position: relative;
+    padding: 0px 0px 0px 300px;
+  }
+}
+.biv-left {
+  background-color: #222174;
+  position: relative;
+  padding: 0px 0px 0px 0px;
+}
+.biv-left-header {
+  background-color: #fff;
+  text-align: center;
+  padding: 20px 15px 20px 15px;
+}
+.biv-left-header-logo {
+  display: block;
+  margin-bottom: 6px;
+  text-decoration: none;
+}
+.biv-left-header-logo:hover {
+  text-decoration: none;
+}
+.biv-left-header-logo img {
+  width: 64px;
+  height: 64px;
+}
+.biv-left-header-title {
+  display: block;
+  font-weight: 700;
+  color: #1b3182;
+  text-decoration: none;
+}
+.biv-left-header-title:hover {
+  color: #1b2c82;
+  text-decoration: none;
+}
+.biv-left-footer {
+  background-color: #2b2b2b;
+  text-align: center;
+  padding: 16px 15px 16px 15px;
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  line-height: 16px;
+  color: #fff;
+}
+.biv-header-nav-items {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.biv-header-nav-items li {
+  display: block;
+}
+.biv-header-nav-items li.biv-header-nav-submenu ul {
+  background-color: #6b4b84;
+  margin: 0px 0px -1px 0px;
+  padding: 0px 0px 0px 0px;
+  border-left: 15px solid #926fac;
+}
+.biv-header-nav-items li div {
+  padding: 15px 41px 15px 55px;
+  color: #fff;
+  border-bottom: 1px solid #926fac;
+  position: relative;
+  font-size: 18px;
+  line-height: 18px;
+  cursor: pointer;
+  position: relative;
+}
+.biv-header-nav-items li div::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  content: "\f107";
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 18px;
+}
+.biv-header-nav-items li div:hover {
+  background-color: #514b84;
+}
+.biv-header-nav-items li div span {
+  display: inline-block;
+  width: 30px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  text-align: center;
+}
+.biv-header-nav-items li a {
+  display: block;
+  padding: 15px 15px 15px 55px;
+  color: #fff;
+  border-bottom: 1px solid #5a61a3;
+  position: relative;
+  font-size: 18px;
+  line-height: 18px;
+  text-decoration: none;
+}
+.biv-header-nav-items li a:hover {
+  background-color: #5a4b84;
+  color: #fff;
+  text-decoration: none;
+}
+.biv-header-nav-items li a span {
+  display: inline-block;
+  width: 30px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  text-align: center;
+}
+.biv-header-nav-items li a b {
+  display: inline-block;
+  float: right;
+  background-color: #5a4b84;
+  padding: 5px 10px 5px 10px;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  border-radius: 7px;
+  margin-top: -3px;
+}
+.biv-header-nav-submenu ul {
+  display: none;
+}
+.biv-header-nav-submenu.active div {
+  background-color: #443681;
+}
+.biv-header-nav-submenu.active ul {
+  display: block;
+}
+.biv-header-nav-submenu.active ul li a:hover {
+  background-color: #41498b;
+  color: #fff;
+}
+.biv-header-nav-items li.active a {
+  background-color: #3c3292;
+}
+.biv-header-nav-items li.active a:hover {
+  background-color: #443c8f;
+}
+.biv-header-nav-submenu ul li.active a {
+  background-color: #51409e;
+}
+
+.biv-left-header span {
+  display: none;
+}
+@media (max-width:991px){
+  .biv-left {
+    display: none;
+  }
+  .biv-left.active {
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 999;
+  }
+  .biv-left-footer {
+    background-color: #222174;
+    text-align: right;
+  }
+  .biv-left.active .biv-left-header span {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    z-index: 9999;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background-color: #1b1297;
+    color: #fff;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 24px;
+    margin: 0px 2px 0px 2px;
+    padding-top: 12px;
+    cursor: pointer;
+  }
+  .biv-left.active .biv-left-header span:hover {
+    background-color: #3d26a4;
+    color: #fff;
+  }
+}
+@media (min-width:992px){
+  .biv-left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    min-height: 100%;
+    z-index: 99;
+    padding: 0px 0px 48px 0px;
+    border-right: 3px solid #ebeaec;
+  }
+  .biv-left-footer {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+  }
+}
+.biv-user {
+  background-color: #fff;
+  text-align: right;
+  padding: 15px;
+}
+.biv-user-info {
+  display: inline-block;
+  height: 48px;
+  padding: 15px 15px 0px 78px;
+  position: relative;
+}
+.biv-user-info-img {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  left: 15px;
+}
+.biv-user-info-name {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 18px;
+}
+.biv-user-nav {
+  display: inline-block;
+  padding: 0px 13px 0px 13px;
+}
+.biv-user-nav a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-color: #3a1b82;
+  color: #fff;
+  border-radius: 7px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+  margin: 0px 2px 0px 2px;
+  padding-top: 12px;
+  text-decoration: none;
+}
+.biv-user-nav a:hover {
+  background-color: #4826a4;
+  color: #fff;
+  text-decoration: none;
+}
+.biv-user-menu {
+  display: inline-block;
+  padding: 0px 13px 0px 13px;
+  float: left;
+}
+.biv-user-menu span {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-color: #3a1b82;
+  color: #fff;
+  border-radius: 7px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+  margin: 0px 2px 0px 2px;
+  padding-top: 12px;
+  cursor: pointer;
+}
+.biv-user-menu span:hover {
+  background-color: #4126a4;
+  color: #fff;
+}
+@media (max-width:767px){
+  .biv-user-info {
+    display: none;
+  }
+}
+@media (max-width:991px){
+  .biv-user {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 9;
+  }
+}
+@media (min-width:992px){
+  .biv-user-menu {
+    display: none;
+  }
+}
+.biv-location {
+  padding: 15px;
+}
+.biv-location a {
+  display: inline-block;
+  padding: 15px;
+  font-size: 18px;
+  line-height: 18px;
+  color: #431b82;
+  border-radius: 7px;
+  transition: 0.5s linear;
+  text-decoration: none;
+}
+.biv-location a:hover {
+  background-color: #fff;
+  color: #4826a4;
+  text-decoration: none;
+}
+.biv-location span {
+  display: inline-block;
+  padding: 15px;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000;
+}
+@media (max-width:991px){
+  .biv-location {
+    margin-top: 79px;
+  }
+}
+.biv-panel-content {
+  padding: 30px 30px 0px 30px;
+  text-align: center;
+}

@@ -1,0 +1,44 @@
+{% extends "libercom/base.html" %}
+
+{% block main %}
+    <div class="container" id="add_div">
+        <div class="container" id="add_div">
+            <h3 id="title_add">Ficha de Cadastro</h3>
+            <form  id="form_add" method="POST" action="">
+                {% csrf_token %}
+                <p>
+                    <label for="id_first_name">Primeiro Nome:</label>
+                    <input type="text" name="first_name" maxlength="40" required=""></p>
+                <p>
+                    <label for="id_last_name">Último Nome:</label>
+                    <input type="text" name="last_name" maxlength="40" required=""></p>
+                <p>
+                    <label for="id_birth_date">Data de Nascimento:</label>
+                    <input type="date" name="birth_date"></p>
+                <p>
+                    <label for="id_phone">Telemóvel:</label>
+                    <input type="text" name="phone" maxlength="21" required=""></p>
+                <p>
+                    <label for="id_email">E-mail:</label>
+                    <input type="email" name="email" maxlength="254" required=""></p>
+                <p>
+                    <label for="id_plano">Plano:</label>
+                    <select name="plano" required="" id="id_plano">
+                        <option value="">---------</option>
+                        {% for plano in planos %}
+                            <option value="{{ plano.id }}">{{ plano.name }}</option>
+                        {% endfor %}
+                    </select>
+                </p>
+                <p>
+                    <label for="id_user">Nome do usuário:</label>
+                    <input type="text" name="username" maxlength="40" required=""></p>
+                <p>
+                    <label for="id_password">Senha:</label>
+                    <input type="password" name="password" maxlength="25" required=""></p>
+
+                <input id="submit" type="submit" value="+ Adicionar">
+            </form>
+        </div>
+    </div>
+{% endblock %}

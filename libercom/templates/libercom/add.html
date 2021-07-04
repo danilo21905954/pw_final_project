@@ -1,0 +1,16 @@
+{% extends "libercom/base.html" %}
+
+{% block main %}
+    <div class="container" id="add_div">
+        <div class="container" id="add_div">
+            <h3 id="title_add">Adiconar um Contato</h3>
+            <form  id="form_add" method="POST" action="">
+                {% csrf_token %}
+                {{ form.as_p }}
+
+                <input id="submit" type="submit" value="+ Adicionar">
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

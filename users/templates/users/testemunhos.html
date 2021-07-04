@@ -1,0 +1,52 @@
+{% extends 'users/base.html' %}
+
+{% block main %}
+    <!-- Fast passage   -->
+    <div class="biv-location">
+        <span>Testemunhos</span>
+    </div>
+    <!-- Fast passage   -->
+    
+    <!-- Content   -->
+    <div class="biv-panel-content">
+
+            <div class="biv-panel-table">
+                <div class="biv-panel-table-content">
+                    <div class="biv-panel-table-title">Testemunhos</div>
+
+                    <form method="POST" action="">
+                        {% csrf_token %}
+                        {% for testemunho in form %}
+                            <div class="biv-panel-table-item">
+                                <div class="biv-panel-table-item-title">
+                                    {{ testemunho.name }} {{ testemunho.apelido }}<br>
+                                    {% if testemunho.voto == 1 %}
+                                        <span >⭐</span><br><br>
+                                    {% elif testemunho.voto == 2 %}
+                                        <span >⭐⭐</span><br><br>
+                                    {% elif testemunho.voto == 3 %}
+                                        <span >⭐⭐⭐</span><br><br>
+                                    {% elif testemunho.voto == 4 %}
+                                        <span >⭐⭐⭐⭐</span><br><br>
+                                    {% elif testemunho.voto == 5 %}
+                                        <span >⭐⭐⭐⭐⭐</span><br><br>
+                                    {% endif %}
+                                    {{ testemunho.testemunho }}</div>
+                                <div class="biv-panel-table-item-settings">
+                                    <a href="{% url 'users:testemunho-edit' testemunho.id %}">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </a>
+                                    <a href="{% url 'users:testemunho-delete' testemunho.id %}">
+                                        <i class="fas fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Content   -->
+{% endblock %}
+
+

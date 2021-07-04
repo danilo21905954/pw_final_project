@@ -1,0 +1,39 @@
+{% extends 'users/base.html' %}
+
+{% block main %}
+<!-- Fast passage   -->
+        <div class="biv-location">
+            <span>Contatos</span>
+        </div>
+<!-- Fast passage   -->
+
+<!-- Content   -->
+        <div class="biv-panel-content">
+
+            <div class="biv-panel-btns">
+                <a href="{% url  'users:users-new' %}" class="biv-panel-btn">Adicionar Contato</a>
+            </div>
+
+            <div class="biv-panel-table">
+                <div class="biv-panel-table-content">
+                    <div class="biv-panel-table-title">Lista de Usuários</div>
+                    {% for contato in contatos %}
+                        <div class="biv-panel-table-item">
+                            <div class="biv-panel-table-item-title">{{ contato.name }}</div>
+                            <div class="biv-panel-table-item-settings">
+                                <a href="{% url  'users:users-edit' contato.id %}">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </a>
+                                <a href="{% url  'users:users-delete' contato.id %}">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+<!-- Content   -->
+{% endblock %}
+

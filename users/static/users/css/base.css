@@ -1,0 +1,40 @@
+.biv-form-btn-right input {
+    display: inline-block;
+    background-color: #1b2582;
+    color: #fff;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    min-width: 200px;
+    border-width: 0;
+}
+
+.biv-form-btn-right input:hover{
+    background-color: #2432af;
+}
+
+input#id_enable, input#id_destaque{
+    width: 20px;
+    height: 20px;
+}
+
+div a#delete{
+    background-color: rgba(255, 122, 122, 0.56);
+    border: none ;
+    color: #ffffff;
+}
+
+div a#delete:hover{
+    background-color: rgba(255, 105, 105, 0.68);
+}
+
+#graph{
+    margin: 10px;
+}
+
+#chart img{
+    display: inline-block;
+    margin: 10px 20px;
+}

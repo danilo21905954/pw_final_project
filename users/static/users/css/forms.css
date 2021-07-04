@@ -1,0 +1,238 @@
+/*
+ * © Bugaev Ivan
+ * This code is protected by copyright.
+*/
+
+/* Forms */
+
+.biv-form {
+  display: inline-block;
+  width: 100%;
+  max-width: 650px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px #d2d2d2;
+  border-radius: 7px;
+  padding: 15px 15px 15px 15px;
+  margin-bottom: 60px;
+  text-align: left;
+}
+.biv-form-full {
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px #d2d2d2;
+  border-radius: 7px;
+  padding: 15px 15px 15px 15px;
+  margin-bottom: 60px;
+  text-align: left;
+}
+.biv-form-title {
+  padding: 15px;
+  font-size: 24px;
+  line-height: 32px;
+}
+.biv-form-notification {
+  padding: 15px;
+  margin: 15px;
+}
+.biv-form-notification.green {
+  background-color: #1b823e;
+  color: #fff;
+}
+.biv-form-notification.orange {
+  background-color: #d95b00;
+  color: #fff;
+}
+.biv-form-notification.red {
+  background-color: #b00000;
+  color: #fff;
+}
+.biv-form-input {
+  padding: 15px;
+}
+.biv-form-input-title {
+  margin-bottom: 6px;
+  font-size: 18px;
+  line-height: 26px;
+}
+.biv-form-input-title span {
+  display: inline-block;
+  font-weight: 700;
+  color: #1b2c82;
+  margin-left: 5px;
+}
+.biv-form-input input {
+  height: 48px;
+  border-radius: 0px;
+}
+.biv-form-select {
+  padding: 15px;
+}
+.biv-form-select-title {
+  margin-bottom: 6px;
+  font-size: 18px;
+  line-height: 26px;
+}
+.biv-form-select-title span {
+  display: inline-block;
+  font-weight: 700;
+  color: #1b3582;
+  margin-left: 5px;
+}
+.biv-form-select select {
+  height: 48px;
+  border-radius: 0px;
+}
+.biv-form-textarea {
+  padding: 15px;
+}
+.biv-form-textarea-title {
+  margin-bottom: 6px;
+  font-size: 18px;
+  line-height: 26px;
+}
+.biv-form-textarea-title span {
+  display: inline-block;
+  font-weight: 700;
+  color: #1b2982;
+  margin-left: 5px;
+}
+.biv-form-textarea textarea {
+  min-height: 100px;
+  border-radius: 0px;
+}
+.biv-form-textarea .biv-form-textarea-middle {
+  min-height: 300px;
+}
+.biv-form-textarea .biv-form-textarea-big {
+  min-height: 600px;
+}
+.biv-form-btn {
+  padding: 15px;
+}
+.biv-form-btn span {
+  display: block;
+  background-color: #1b2582;
+  color: #fff;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+.biv-form-btn span:hover {
+  background-color: #2633a4;
+  color: #fff;
+}
+.biv-form-btn a {
+  display: block;
+  background-color: #1b2082;
+  color: #fff;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+}
+.biv-form-btn a:hover {
+  background-color: #2637a4;
+  color: #fff;
+  text-decoration: none;
+}
+.biv-form-btn-right {
+  text-align: right;
+  padding: 15px;
+}
+.biv-form-btn-right span {
+  display: inline-block;
+  background-color: #1b2982;
+  color: #fff;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  min-width: 200px;
+}
+.biv-form-btn-right span:hover {
+  background-color: #2637a4;
+  color: #fff;
+}
+.biv-form-btn-right a {
+  display: inline-block;
+  background-color: #1b2982;
+  color: #fff;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 15px;
+  text-align: center;
+  min-width: 200px;
+  text-decoration: none;
+}
+.biv-form-btn-right a:hover {
+  background-color: #2641a4;
+  color: #fff;
+  text-decoration: none;
+}
+.biv-form-text {
+  padding: 15px 15px 5px 15px;
+}
+.biv-form-text p {
+  margin: 0px;
+  padding: 0px 0px 10px 0px;
+}
+.biv-form-text ul {
+  margin: 0px;
+  padding: 0px 0px 5px 20px;
+}
+.biv-form-text ul li {
+  margin-bottom: 5px;
+}
+.biv-form-text p span {
+  font-weight: 700;
+}
+.biv-form-line {
+  margin: 0px 15px 0px 15px;
+  border-bottom: 1px solid #e3e3e3;
+}
+@media (max-width:991px){
+  .biv-form-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+.biv-form-spoiler-btns {
+  padding: 15px 0px 0px 15px;;
+}
+.biv-form-spoiler-btns span {
+  display: inline-block;
+  background-color: #1b2582;
+  color: #fff;
+  box-shadow: 0px 0px 10px #d2d2d2;
+  text-align: center;
+  cursor: pointer;
+  margin: 0px 15px 15px 0px;
+  padding: 15px 15px 15px 15px;
+  font-size: 18px;
+  line-height: 18px;
+  min-width: 150px;
+}
+.biv-form-spoiler-btns span:hover {
+  background-color: #2641a4;
+  color: #fff;
+}
+.biv-form-spoiler-btns span.active {
+  background-color: #4b5184;
+  color: #fff;
+}
+.biv-form-spoiler-btns span.active:hover {
+  background-color: #4b5384;
+  color: #fff;
+}
+.biv-form-spoiler-list {
+  display: none;
+}
+.biv-form-spoiler-list.active {
+  display: block;
+}

@@ -1,0 +1,257 @@
+#contato{
+	display:inline-block;
+	padding:10px;
+	background-color: #0d89ed;
+	margin:10px;
+	border-radius:20px;
+}
+
+#contato:hover{
+	background-color: #00a1f1;
+}
+
+#contato p{
+	color: rgba(0, 0, 0, 0.46);
+	margin: 0 0 2px 0 ;
+}
+
+#title-contato{
+	display: inline-block;
+	font-size: 36px;
+}
+
+#separador{
+	width: 100%;
+	display: flex;
+	justify-content:space-between;
+    flex-wrap: wrap;
+	margin: 50px 0 10px 0;
+}
+
+#add{
+	background-color: #c1c1c1;
+	border-radius: 10px;
+	align-self: center;
+	justify-self: center;
+	border: none;
+	outline: inherit;
+	font-size: 22px;
+	color: #555555;
+	padding: 5px 25px;
+}
+
+#add:hover{
+	background-color: #a3a3a3;
+}
+
+#list{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 0 0 40px 0;
+}
+
+#options{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#options a{
+	outline: inherit;
+	border-radius: 20px;
+	border: 2px solid rgba(255, 255, 255, 0.77);
+	background-color: rgba(255, 255, 255, 0);
+	color: rgba(255, 255, 255, 0.73);
+	padding: 2px 15px;
+	margin: 8px 5px;
+}
+
+#options a:hover{
+	border: 2px solid white;
+	background-color: white;
+	color: #00a1f1;
+}
+
+#form_add input, #form_add select,#form_add textarea{
+    outline: inherit;
+    border-radius: 10px;
+    background-color: rgba(196, 229, 255, 0.85);
+    border: 2px solid rgba(94, 145, 255, 0.7);
+    padding: 5px 5px 5px 20px;
+    margin: 5px 10px;
+}
+
+#form_add input:focus , #form_add select:focus{
+    background-color: rgb(232, 245, 255);
+}
+
+#form_add{
+	margin-top: 40px;
+    display: inline-grid;
+    align-self: start;
+    justify-content: center;
+    padding: 10px;
+}
+
+#form_add label{
+    color: #444444;
+}
+
+div #submit{
+    outline: inherit;
+	border-radius: 20px;
+	border: 2px solid rgba(194, 194, 194, 0.77);
+	background-color: rgba(255, 255, 255, 0);
+	color: rgba(26, 26, 26, 0.73);
+	padding: 2px 15px;
+	margin: 8px 5px;
+    font-size: 22px;
+}
+
+#submit:hover{
+    border: 2px solid #0091bd;
+	background-color: #0091bd;
+    color:white;
+}
+
+#title_add{
+    font-size: 36px;
+    padding: 5px;
+}
+
+#back:hover{
+    color: blue;
+}
+
+#registrar{
+	color: white;
+	text-transform: uppercase;
+	border-radius: 25px;
+	font-family: "Raleway", sans-serif;
+    font-weight: 700;
+	text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+	user-select: none;
+    background-image: none;
+	padding: 15px 40px;
+    border: none;
+    background-color: #42a5f5;
+	font-size: 12px;
+}
+
+div a.home_button{
+	background-color: #0d89ed;
+	padding: 10px 20px;
+	font-family: "Raleway", sans-serif;
+    font-weight: 700;
+	font-size: 15px;
+	user-select: none;
+    background-image: none;
+	color: white;
+	border-radius: 20px;
+}
+
+.home_button:hover{
+	background-color: #0b6bb8;
+}
+
+.success_title{
+	color: #46e546;
+	font-family: "Raleway", sans-serif;
+	font-weight: 700;
+	font-size: 42px;
+}
+
+#success_div{
+	margin: 40px;
+	padding: 50px;
+}
+
+div#success_div p{
+	margin: 0 0 30px 0 ;
+	color: gray;
+}
+
+#add_test{
+	margin: 20px;
+}
+
+#add_test:hover{
+	background-color: #0d89ed;
+}
+
+#espace{
+	padding: 20px;
+}
+
+#form_add textarea{
+	display: block;
+}
+
+.pricing-2-section .content-title {
+	font-size: 60px;
+}
+
+.pricing-2-section .content-icon-image-header {
+	margin-bottom: 0;
+	height: auto;
+}
+
+.kc-pricing-tables.kc-pricing-layout-2 .header-pricing .content-title .content-sub-title{
+	padding: 0;
+}
+
+.pricing-2-section .kc-elm.kc-css-835772.kc-pricing-tables.kc-pricing-layout-2:hover {
+    background-color: rgba(128, 128, 128, 0.41);
+}
+
+.pricing-2-section .kc-elm.kc-css-835772.kc-pricing-tables.kc-pricing-layout-2:hover {
+    background-color: #e2e2e2;
+}
+
+.kc-elm.kc-css-835772.kc-pricing-tables.kc-pricing-layout-2.text-center.mddl:hover{
+	background-color: #d5d5d5;
+}
+
+.pricing-2-section .kc-elm.kc-css-835772.kc-pricing-tables.kc-pricing-layout-2.text-center.mddl .content-title{
+	padding-top: 80px;
+}
+
+.pricing-2-section .content-title{
+	padding-top: 25px;
+}
+
+.kc-pricing-price{
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
+.pricing-2-section .content-button{
+	margin: 15px;
+}
+
+.kc-elm.kc-css-835772.kc-pricing-tables.kc-pricing-layout-2{
+	padding-bottom: 25px;
+}
+
+#test{
+	padding: 10px 8px;
+	border-radius: 25px;
+	border: 2px solid white;
+	background-color: rgba(255, 255, 255, 0);
+	text-align: center;
+	font-family: Raleway;
+	font-weight: bold;
+}
+
+#test:hover{
+	color: #0d89ed;
+	background-color: white;
+
+}
+
+#test:hover a, a:hover{
+	color: #0d89ed;
+}

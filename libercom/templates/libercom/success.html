@@ -1,0 +1,10 @@
+{% extends "libercom/base.html" %}
+
+{% block main %}
+    <div class="container" id="success_div">
+        <h3 class="success_title">Contato adicionado com sucesso</h3>
+        <p>Obrigado por adicionar o seu contato.</p>
+        <a class="home_button" href="{% url 'libercom:home' %}">Home Page</a>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,179 @@
+/*
+ * © Bugaev Ivan
+ * This code is protected by copyright.
+*/
+
+.biv-panel-btns {
+  text-align: left;
+  padding-bottom: 15px;
+}
+.biv-panel-btn {
+  display: inline-block;
+  background-color: #1b2982;
+  color: #fff;
+  box-shadow: 0px 0px 10px #d2d2d2;
+  border-radius: 7px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0px 15px 15px 0px;
+  padding: 15px 15px 15px 15px;
+  font-size: 18px;
+  line-height: 18px;
+  min-width: 150px;
+}
+.biv-panel-btn:hover {
+  background-color: #263ba4;
+  color: #fff;
+  text-decoration: none;
+}
+
+.biv-panel-table {
+  text-align: center;
+  padding-bottom: 15px;
+}
+.biv-panel-table-content {
+  display: inline-block;
+  width: 100%;
+  max-width: 750px;
+  text-align: left;
+}
+.biv-panel-table-title {
+  text-align: center;
+  padding-bottom: 15px;
+  font-size: 24px;
+  line-height: 32px;
+}
+.biv-panel-table-item {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px #d2d2d2;
+  border-radius: 7px;
+  padding: 15px 15px 15px 15px;
+  text-decoration: none;
+  transition: 0.5s linear;
+  margin-bottom: 15px;
+}
+.biv-panel-table-item:hover {
+  box-shadow: 0px 0px 10px #848484;
+  text-decoration: none;
+}
+.biv-panel-table-item-title {
+  float: left;
+  padding: 11px 15px 11px 15px;
+  vertical-align: middle;
+}
+.biv-panel-table-item-settings {
+  float: right;
+  padding: 0px 0px 0px 11px;
+  vertical-align: middle;
+}
+.biv-panel-table-item-settings a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-color: #1b2082;
+  color: #fff;
+  border-radius: 7px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+  margin: 0px 0px 0px 4px;
+  padding-top: 12px;
+  text-decoration: none;
+}
+.biv-panel-table-item-settings a:hover {
+  background-color: #263ba4;
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width:991px){
+  .biv-panel-table-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.biv-panel-tiles {
+  padding-bottom: 30px;
+}
+.biv-panel-tile {
+  display: block;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px #d2d2d2;
+  border-radius: 7px;
+  padding: 30px 15px 30px 15px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.5s linear;
+  margin-bottom: 30px;
+}
+.biv-panel-tile:hover {
+  box-shadow: 0px 0px 10px #848484;
+  text-decoration: none;
+}
+.biv-panel-tile-icon {
+  color: #bfa0d7;
+  font-size: 32px;
+  line-height: 32px;
+  margin-bottom: 10px;
+}
+.biv-panel-tile-title {
+  color: #000;
+  font-size: 20px;
+  line-height: 28px;
+}
+.biv-panel-tile-title span {
+  display: inline-block;
+  margin-left: 8px;
+  color: #1b2582;
+  font-weight: 700;
+}
+@media (max-width:991px){
+  .biv-panel-tile-title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+.biv-panel-stat {
+  padding-bottom: 30px;
+}
+.biv-panel-stat-item {
+  display: block;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px #d2d2d2;
+  border-radius: 7px;
+  padding: 30px 15px 30px 15px;
+  text-align: center;
+  transition: 0.5s linear;
+  margin-bottom: 30px;
+}
+.biv-panel-stat-item:hover {
+  box-shadow: 0px 0px 10px #848484;
+}
+.biv-panel-stat-item-count {
+  color: #a0a9d7;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.biv-panel-stat-item-title {
+  color: #000;
+  font-size: 20px;
+  line-height: 28px;
+}
+.biv-panel-stat-item-title span {
+  display: inline-block;
+  margin-left: 8px;
+  color: #1e1b82;
+  font-weight: 700;
+}
+@media (max-width:991px){
+  .biv-panel-stat-item-title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}

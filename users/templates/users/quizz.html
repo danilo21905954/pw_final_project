@@ -1,0 +1,29 @@
+{% extends 'users/base.html' %}
+
+{% block main %}
+<!-- Fast passage   -->
+        <div class="biv-location">
+            <span>Quizz</span>
+        </div>
+<!-- Fast passage   -->
+
+<!-- Content   -->
+<!-- Content   -->
+        <div class="biv-panel-content">
+            <div class="biv-panel-stat">
+                <div class="row">
+                    {% for q in quizz %}
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                            <div class="biv-panel-stat-item">
+                                <div class="biv-panel-stat-item-count">{{ q.nota }}</div>
+                                <div class="biv-panel-stat-item-title">{{ q.name }}</div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+<!-- Content   -->
+{% endblock %}
+
+

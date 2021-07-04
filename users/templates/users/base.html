@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        {% load static %}
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Libercom - APP</title>
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'libercom/img/favicon.ico' %}"/>
+        <link href="{% static 'users/lib/bootstrap-4.5.3-dist/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'users/lib/fontawesome/css/all.css' %}" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <link href="{% static 'users/css/style.css' %}" rel="stylesheet">
+        <link href="{% static 'users/css/forms.css' %}" rel="stylesheet">
+        <link href="{% static 'users/css/other.css' %}" rel="stylesheet">
+        <link href="{% static 'users/css/base.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="biv-panel">
+            <!-- Left panel  -->
+            <div class="biv-left">
+                <div class="biv-left-header">
+                    <a href="{% url 'users:home' %}" class="biv-left-header-logo">
+                        <img src="{% static 'users/img/logo.png' %}" alt="Company name">
+                    </a>
+                    <a href="{% url 'users:home' %}" class="biv-left-header-title">Painel de Controle</a>
+                    <span onclick="BivNavBtn();">
+                        <i class="fas fa-times"></i>
+                    </span>
+                </div>
+                <div class="biv-left-nav">
+                    <ul class="biv-header-nav-items">
+                        <li id="menu1">
+                            <a href="{% url 'users:home' %}"><span><i class="fas fa-book-open"></i></span>Home</a>
+                        </li>
+                        <li id="menu2">
+                            <a href="{% url 'users:testemunho' %}"><span><i class="fas fa-envelope"></i></span>Testemunhos</a>
+                        </li>
+                        <li id="menu3">
+                            <a href="{% url 'users:users' %}"><span><i class="fas fa-users"></i></span>Contatos</a>
+                        </li>
+                        <li id="menu4">
+                            <a href="{% url 'users:quizz' %}"><span><i class="fas fa-search"></i></span>Quizz</a>
+                        </li>
+                        <li id="menu5">
+                            <a href="{% url 'users:statistics' %}"><span><i class="fas fa-chart-pie"></i></span>Estatísticas</a>
+                        </li>
+                        <li id="menu6">
+                            <a href="{% url 'users:planos' %}"><span><i class="fas fa-code"></i></span>Planos</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="biv-left-footer">© {{ year }} Libercom</div>
+            </div>
+            <!-- Left panel  -->
+            <!-- User panel   -->
+            <div class="biv-user">
+                <div class="biv-user-menu">
+                    <span onclick="BivNavBtn();">
+                        <i class="fas fa-bars"></i>
+                    </span>
+                </div>
+                <div class="biv-user-info">
+                    <span class="biv-user-info-img biv-background" data-src="{% static 'users/img/demo/user/01.jpg' %}"></span>
+                    <span class="biv-user-info-name">{{ user.first_name }} {{ user.last_name }}</span>
+                </div>
+                <div class="biv-user-nav">
+                    <a href="{% url 'users:exit' %}">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- User panel   -->
+            {% block main %}
+
+            {% endblock %}
+        </div>
+        <script src="{% static 'users/js/scripts.js' %}"></script>
+        <script>
+            BivSection('{{ option }}');
+        </script>
+    </body>
+</html>

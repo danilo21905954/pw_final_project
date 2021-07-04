@@ -1,0 +1,29 @@
+{% extends 'users/base.html' %}
+
+{% block main %}
+<!-- Fast passage   -->
+        <div class="biv-location">
+            <a href="{% url  'users:users' %}">Contatos</a>
+            <span>Deletar Contato</span>
+        </div>
+<!-- Fast passage   -->
+
+<!-- Content   -->
+        <div class="biv-panel-content">
+
+            <div class="biv-form">
+                <div class="biv-form-title">Deletar Contato: {{ contato.name }}</div>
+                <div class="biv-form-line"></div>
+                <div class="biv-form-text">
+                    <p>O usuario será deletado da sua base de dados.</p>
+                </div>
+                <div class="biv-form-line"></div>
+                <div class="biv-form-btn-right">
+                    <a href="{% url  'users:users-delete-confirmed' contato.id %}">Delete</a>
+                </div>
+            </div>
+        </div>
+<!-- Content   -->
+{% endblock %}
+
+

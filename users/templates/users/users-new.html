@@ -1,0 +1,45 @@
+{% extends 'users/base.html' %}
+
+{% block main %}
+<!-- Fast passage   -->
+        <div class="biv-location">
+            <a href="{% url  'users:users' %}">Contatos</a>
+            <span>Adicionar Contato</span>
+        </div>
+<!-- Fast passage   -->
+
+<!-- Content   -->
+        <div class="biv-panel-content">
+
+            <div class="biv-form">
+                <div class="biv-form-title">Adicionar Novo Contato</div>
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    {% for foo in form %}
+                        {% if foo.label == "Plano" %}
+                            <div class="biv-form-line"></div>
+                            <div class="biv-form-select">
+                                {{ foo.label }}
+                                {{ foo }}
+                            </div>
+                        {% else %}
+                            <div class="biv-form-line"></div>
+                            <div class="biv-form-input">
+                                {{ foo.label }}
+                                {{ foo }}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+
+                    <div class="biv-form-line"></div>
+                    <div class="biv-form-btn-right">
+                        <input id="submit" type="submit" value="Salvar">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+<!-- Content   -->
+{% endblock %}
+
+

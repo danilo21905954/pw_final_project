@@ -1,0 +1,29 @@
+{% extends 'users/base.html' %}
+
+{% block main %}
+<!-- Fast passage   -->
+        <div class="biv-location">
+            <span>Sair</span>
+        </div>
+<!-- Fast passage   -->
+
+<!-- Content   -->
+        <div class="biv-panel-content">
+
+            <div class="biv-form">
+                <div class="biv-form-title">Sair do painel de controle</div>
+                <div class="biv-form-line"></div>
+                <div class="biv-form-text">
+                    <p>Deseja mesmo sair do Painel de Controle?</p>
+                </div>
+                <div class="biv-form-line"></div>
+                <a href="{% url 'users:logout' %}" class="biv-form-btn-right">
+                    <span>Sair</span>
+                </a>
+            </div>
+
+        </div>
+<!-- Content   -->
+{% endblock %}
+
+

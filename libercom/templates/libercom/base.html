@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Libercom - Internet Banda Larga</title>
+        {% load static %}
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'libercom/img/favicon.ico' %}"/>
+        <meta name="description" content="Libercom é uma empresa provedora de internet em São Paulo. "/>
+        <meta name="keywords" content="internet wifi banda-larga megas"/>
+        <meta name="author" content="Danilo Foganholi e Leonardo Conceiçao"/>
+        <!-- Mobile Specific Meta -->
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+        <meta name="MobileOptimized" content="320"/>
+        <!-- css Library -->
+        <!-- boorstrap -->
+        <link rel="stylesheet" type="text/css" href="{% static 'libercom/css/bootstrap.min.css' %}">
+        <!-- themify-icon.css -->
+        <link rel="stylesheet" type="text/css" href="{% static 'libercom/css/font-awesome.min.css' %}">
+        <!-- owl-carousel -->
+        <link rel="stylesheet" type="text/css" href="{% static 'libercom/css/owl.carousel.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'libercom/css/owl.theme.css' %}">
+        <!-- Video-min -->
+        <link rel="stylesheet" type="text/css" href="{% static 'libercom/css/video.min.css' %}">
+        <!-- animate.css -->
+        <link rel="stylesheet" type="text/css" href="{% static 'libercom/css/animate.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'libercom/css/font-monia.css' %}">
+        <!-- REVOLUTION STYLE SHEETS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'libercom/rev-slider/css/settings.css' %}">
+        <!-- REVOLUTION LAYERS STYLES -->
+        <link rel="stylesheet" type="text/css" href="{% static 'libercom/rev-slider/css/layers.css' %}">
+        <!-- REVOLUTION NAVIGATION STYLES -->
+        <link rel="stylesheet" type="text/css" href="{% static 'libercom/rev-slider/css/navigation.css' %}">
+        <!-- style -->
+        <link rel="stylesheet" type="text/css" href="{% static 'libercom/css/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'libercom/css/template.css' %}">
+        <!-- responsive.css -->
+        <link rel="stylesheet" type="text/css" href="{% static 'libercom/css/responsive.css' %}">
+        <!-- space.css -->
+        <link rel="stylesheet" type="text/css" href="{% static 'libercom/css/space.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'libercom/css/base.css' %}">
+    </head>
+    <!-- /end of head -->
+    <body>
+        <div id="preloader"></div>
+        <div id="wrapper-container" class="wrapper-container">
+            <div id="apus-mobile-menu" class="apus-offcanvas hidden-lg hidden-md">
+                <div class="apus-offcanvas-body">
+                    <div class="offcanvas-head">
+                        <button type="button" class="btn btn-toggle-canvas" data-toggle="offcanvas">
+                            <i class="fa fa-close"></i>
+                        </button>
+                        <strong>MENU</strong>
+                    </div>
+                    <nav class="navbar navbar-offcanvas navbar-static">
+                        <div class="navbar-collapse navbar-offcanvas-collapse">
+                            <ul id="main-mobile-menu" class="nav navbar-nav">
+                                <li><a href="{% url 'libercom:home' %}">Home</a></li>
+                                <li><a href="{% url 'libercom:plano' %}">Plano</a></li>
+                                <li><a href="{% url 'libercom:quizz' %}">Quizz</a></li>
+                                <li><a href="{% url 'libercom:sobre' %}">Sobre</a></li>
+                                <li><a href="{% url 'libercom:adicionar' %}">Contato</a></li>
+                            </ul>
+                        </div>
+                        <div class="contact_num">
+                            <h2><i class="fa fa-phone"></i> <a href="callto:+551130906996" target="_blank">(+55)11 3090-6996</a></h2>
+                        </div>
+                        <div class="contact_num">
+                            <h2><i class="fa fa-whatsapp"></i><a href="https://api.whatsapp.com/send?phone=+5511991181710" target="_blank">(+55)11 99118-1710</a> </h2>
+                        </div>
+                        <div class="contact_num">
+                            <h2><i class="fa fa-envelope"></i> <a href="mailto:vendas@libercom.com.br" target="_blank">vendas@libercom.com.br</a></h2>
+                        </div>
+                        <div class="mobile-login text-center margin-top-30">
+                            <button href="#"><i class="fa fa-user"></i>  Login</button>
+                        </div>
+
+                        <div id="id01" class="modal">
+                            <form class="modal-content animate" method="POST" action="{% url 'users:login' %}">
+
+                                <div class="img container">
+                                    <span onclick="document.getElementById('id01').style.display='none'" class="close-1" title="Close">&times;</span>
+                                </div>
+
+                                <div class="login-mbl">
+                                    {% csrf_token %}
+                                    <input class="margin-bottom-20" type="text" placeholder="Enter Username" name="username" required>
+                                    <input type="password" placeholder="Enter Password" name="password" required>
+
+                                    <label for="apus-user-remember">
+                                        <input class="checkbox-noanet margin-top-20" type="checkbox" name="remember" id="apus-user-remember" value="true"> Remember Me                          </label>
+                                    <div class="mobile-login text-center margin-top-30">
+                                        <input type="submit">Login</input>
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div id="apus-header-mobile" class="header-mobile hidden-lg hidden-md clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <div class="active-mobile pull-left">
+                            <button data-toggle="offcanvas" class="btn btn-sm btn-danger btn-offcanvas btn-toggle-canvas offcanvas" type="button">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="logo logo-theme">
+                            <a href="{% url 'libercom:home' %}" >
+                                <img src="{% static 'libercom/img/logo.png' %}" alt="Libercom">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header id="apus-header" class="site-header header-v2 hidden-sm hidden-xs">
+            <div id="apus-topbar" class="apus-topbar">
+                <div class="container">
+                    <div class="topbar-inner clearfix">
+                        <div class="pull-left contact-topbar-2">
+                            <aside id="text-7" class="widget widget_text">
+                                <div class="textwidget">
+                                    <div class="contact">
+                                        <span class="phone">
+                                          Telefone: <a href="callto:+551130906996">(+55)11 3090-6996</a>
+                                        </span>
+                                        <span class="phone">
+                                            WhatApp: <a href="https://api.whatsapp.com/send?phone=+5511991181710" target="_blank">(+55)11 99118-1710</a>
+                                        </span>
+                                        <span class="email">
+                                            Email : <a href="mailto:vendas@libercom.com.br">vendas@libercom.com.br</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="pull-right widget-social">
+                            <div id="apus_socials_widget-4" class=" widget_apus_socials_widget">
+                                <ul class="social list-unstyled list-inline bo-sicolor">
+                                    <li>
+                                        <a href="https://www.facebook.com/libercombandalarga/" target="_blank" class="facebook">
+                                            <i class="fa fa-facebook bo-social-facebook">&nbsp;</i>
+                                            <span class="hidden">Facebook</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/company/libercom-provider/" target="_blank" class="linkedin">
+                                            <i class="fa fa-linkedin bo-social-linkedin">&nbsp;</i><span class="hidden">LinkedIn</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-main clearfix main-sticky-header-wrapper" style="height: 128px;">
+                <div class="main-sticky-header">
+                    <div class="container">
+                        <div class="header-inner">
+                            <div class="row">
+                                <!-- LOGO -->
+                                <div class="col-md-3">
+                                    <div class="logo-in-theme pull-left">
+                                        <div class="logo logo-theme">
+                                            <a href="{% url 'libercom:home' %}">
+                                                <img src="{% static 'libercom/img/logo.png' %}" alt="logo">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 p-static">
+                                    <div class="main-menu pull-left">
+                                        <nav data-duration="400" class="hidden-xs hidden-sm apus-megamenu slide animate navbar">
+                                            <div class="collapse navbar-collapse">
+                                                <ul id="primary-menu" class="nav navbar-nav megamenu">
+                                                    <li><a href="{% url 'libercom:home' %}">Home</a></li>
+                                                    <li><a href="{% url 'libercom:plano' %}">Planos</a></li>
+                                                    <li><a href="{% url 'libercom:quizz' %}">Quizz</a></li>
+                                                    <li><a href="{% url 'libercom:sobre' %}">Sobre</a></li>
+                                                    <li><a href="{% url 'libercom:adicionar' %}">Contato</a></li>
+                                                </ul>
+
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="setting-popup pull-right">
+                                        <button id="myBtn" class="modal-btn-1 v-2"><i class="mn-icon-410"></i></button>
+
+                                        <!-- The Modal -->
+                                        <div id="myModal" class="modal modal">
+
+                                            <!-- Modal content -->
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <span class="close">&times;</span>
+                                                    <h2 class="text-uppercase">Log In</h2>
+                                                </div>
+                                                <div class="modal-body margin-top-40">
+                                                    <form class="apus-login-form" action="{% url 'users:login' %}" method="post">
+                                                        <div class="form-group">
+                                                            {% csrf_token %}
+                                                            <input autocomplete="off" type="text" placeholder="CPF/CNPJ" name="username" class="form-control margin-bottom-35" id="username_or_email">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input name="password" type="password" placeholder="Senha" class="password required form-control" id="login_password">
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group margin-top-12">
+                                                                    <label for="apus-user-remember">
+                                                                        <input class="checkbox-noanet" type="checkbox" name="remember" id="apus-user-remember" value="true"> Lembrar de mim                          </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <p class="margin-top-30">
+                                                                    <a class="lost-pass back-link" href="#" title="Esqueceu sua senha">Perdeu sua senha?</a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group padding-bottom-50 text-center">
+                                                            <input type="submit" class="btn text-uppercase btn-sm btn-warning" name="submit" value="Entrar">
+{#                                                            <a href="{% url 'libercom:registrar' %}" id="registrar">Registrar</a>#}
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        {% block main %}
+
+        {% endblock %}
+
+        <!-- Start of newslatter
+        ============================================= -->
+        <section id="news-latter" class="newslatter-section v-v2">
+         <div class="container">
+            <div class="row section-content">
+               <div class="newslatter-content">
+                  <div class="row">
+                     <div class="col-sm-5">
+                        <div class="kc-elm kc-css-154902 kc_text_block">
+                           <div class="callto-action">
+                              <div class="title">Nossas novidades semanais</div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- /col-sm-5 -->
+                     <div class="col-sm-7">
+                        <div class="widget widget-newletter style1">
+                           <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-227 mc4wp-form-basic" method="post" data-id="227" data-name="newletters">
+                              <div class="mc4wp-form-fields">
+                                 <div class="mail-form">
+                                    <input type="text" name="FNAME" placeholder="Nome*" class="form-control">
+                                    <input type="email" name="EMAIL" placeholder="Email*" class="form-control" required="">
+                                    <span class="input-group-btn">
+                                       <button class="btn " type="submit">Enviar</button>
+                                    </span>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+        </section>
+        <!-- End of newslatter
+        ============================================= -->
+
+        <!-- Start of footer
+        ============================================= -->
+        <footer>
+            <section id="footer-area-v2" class="footer-area-v2-section">
+                <div class="container">
+                    <div class="row section-content">
+                        <div class="footer-area-v2-content">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="kc-elm kc-css-568202 kc_col-sm-3 kc_column_inner kc_col-sm-3">
+                                        <div class="kc_wrapper kc-col-inner-container">
+                                            <div class="kc-elm kc-css-23375 kc_shortcode kc_single_image">
+                                                <figure>
+                                                    <img src="{% static 'libercom/img/f-logo.png' %}"
+                                                         class="" alt="Libercom_Logo_Invertido">
+                                                </figure>
+                                            </div>
+                                            <div class="kc-elm kc-css-650694 kc_text_block">
+                                                <p>
+                                                    Empresa de internet da Zona Norte de São Paulo
+                                                </p>
+                                            </div>
+                                            <div class="kc-elm kc-css-791968 kc_text_block">
+                                                <p>
+                                                    Na Libercom você é 100% fibra óptica.
+                                                </p>
+                                            </div>
+                                            <div class="widget widget-social">
+                                                <div class="widget-content">
+                                                    <ul class="social list-inline">
+                                                        <li>
+                                                            <a href="https://www.facebook.com/libercombandalarga/" target="_blank" title="Facebook">
+                                                                <i class="mn-icon-1405"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="https://www.linkedin.com/company/libercom-provider/about/" target="_blank" title="Linkedin">
+                                                                <i class="mn-icon-1408"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /col-sm-3 -->
+                                <div class="col-sm-3">
+                                    <div class="kc-elm kc-css-555002 kc_col-sm-3 kc_column_inner kc_col-sm-3">
+                                        <div class="kc_wrapper kc-col-inner-container">
+                                            <div class="kc-elm kc-css-117500 kc-title-wrap  left lighting">
+                                                <div class="title-wrapper">
+                                                    <h3 class="kc_title raleway">Empresa</h3>
+                                                </div>
+                                            </div>
+                                            <div class="widget widget_apus_custom_menu kc-elm kc-css-937947">
+                                                <div class="apus_custom_menu">
+                                                    <div class="widget widget_nav_menu">
+                                                        <div class="menu-footer-2-container">
+                                                            <ul class="menu">
+                                                                <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-150">
+                                                                    <a href="#">Sobre Nós</a>
+                                                                </li>
+                                                                <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-151">
+                                                                    <a href="#">Empresas Parceiras</a>
+                                                                </li>
+                                                                <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-152">
+                                                                    <a href="#">Presentes em Vouchers</a>
+                                                                </li>
+                                                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-195">
+                                                                    <a href="{% url 'libercom:sitemap' %}">Mapa do Site</a>
+                                                                </li>
+                                                                <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-361">
+                                                                    <a href="#">Testemunhos</a>
+                                                                </li>
+                                                                <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2214">
+                                                                    <a href="#">Programas Afiliados</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /col-sm-3 -->
+                                <div class="col-sm-3">
+                                    <div class="kc-elm kc-css-555002 kc_col-sm-3 kc_column_inner kc_col-sm-3">
+                                        <div class="kc_wrapper kc-col-inner-container">
+                                            <div class="kc-elm kc-css-117500 kc-title-wrap  left lighting">
+                                                <div class="title-wrapper">
+                                                    <h3 class="kc_title raleway">Útil</h3>
+                                                </div>
+                                            </div>
+                                            <div class="widget widget_apus_custom_menu kc-elm kc-css-937947">
+                                                <div class="apus_custom_menu">
+                                                    <div class="widget widget_nav_menu">
+                                                        <div class="menu-footer-2-container">
+                                                            <ul  class="menu">
+                                                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-150">
+                                                                    <a href="#">Suporte de Produto</a>
+                                                                </li>
+                                                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-151">
+                                                                    <a href="#">Fale connosco</a>
+                                                                </li>
+                                                                <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-152">
+                                                                    <a href="#">Base de conhecimento</a>
+                                                                </li>
+                                                                <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-195">
+                                                                    <a href="#">FAQs</a>
+                                                                </li>
+                                                                <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-361">
+                                                                    <a href="#">Chat Online</a>
+                                                                </li>
+                                                                <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2214">
+                                                                    <a href="#">Solicitar Orçamento</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /col-sm-3 -->
+                                <div class="col-sm-3">
+                                    <div class="kc-elm kc-css-555002 kc_col-sm-3 kc_column_inner kc_col-sm-3">
+                                        <div class="kc_wrapper kc-col-inner-container">
+                                            <div class="kc-elm kc-css-117500 kc-title-wrap  left lighting">
+                                                <div class="title-wrapper">
+                                                    <h3 class="kc_title raleway">Serviços</h3>
+                                                </div>
+                                            </div>
+                                            <div class="widget widget_apus_custom_menu kc-elm kc-css-937947">
+                                                <div class="apus_custom_menu">
+                                                    <div class="widget widget_nav_menu">
+                                                        <div class="menu-footer-2-container">
+                                                            <ul  class="menu">
+                                                                <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-150">
+                                                                    <a href="#">Banda Larga</a>
+                                                                </li>
+                                                                <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-151">
+                                                                    <a href="#">Planos mais Vendidos</a>
+                                                                </li>
+                                                                <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-152">
+                                                                    <a href="#">WIFI</a>
+                                                                </li>
+                                                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-195">
+                                                                    <a href="#">Suporte Eficiente</a>
+                                                                </li>
+                                                                <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-361">
+                                                                    <a href="#">Novas conexôes</a>
+                                                                </li>
+                                                                <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2214">
+                                                                    <a href="#">Internet Segura</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /col-sm-3 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /footer area -->
+            <div class="copy-right">
+                <div class="container">
+                    <div class="row">
+                        <div class="copy-right-area">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="kc-elm kc-css-971029 kc_text_block">
+                                        <p>© Copyright {{ year }} | <a href="{% url 'libercom:home' %}">Libercom</a> | Todos os direitos reservados.</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="kc-elm kc-css-135015 kc_shortcode kc_single_image pull-right">
+                                        <figure><img src="{% static 'libercom/img/pay.png' %}" class="" alt="" data-pin-nopin="true"></figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End of footer
+        ============================================= -->
+        <!--  Js Library -->
+        <script type="text/javascript" src="{% static 'libercom/js/jquery-2.1.4.min.js' %}"></script>
+        <!-- Include  for bootstrap -->
+        <script type="text/javascript" src="{% static 'libercom/js/bootstrap.min.js' %}"></script>
+        <!-- Include  for Owl-carousel -->
+        <script type="text/javascript" src="{% static 'libercom/js/owl.carousel.min.js' %}"></script>
+        <!-- Include  for magnific-popup -->
+        <script type="text/javascript" src="{% static 'libercom/js/jquery.magnific-popup.min.js' %}"></script>
+        <!-- Include for counter up -->
+        <script type="text/javascript" src="{% static 'libercom/js/waypoints.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'libercom/js/jquery.counterup.min.js' %}"></script>
+        <!-- Include Apper Js -->
+        <script type="text/javascript" src="{% static 'libercom/js/jquery.isotope.min.js' %}"></script>
+        <!-- Include Apper Js -->
+        <script type="text/javascript" src="{% static 'libercom/js/wow.min.js' %}"></script>
+        <script type="text/javascript">new WOW().init();</script>
+        <!-- Include script.js -->
+        <!-- REVOLUTION JS FILES -->
+        <script type="text/javascript" src="{% static 'libercom/rev-slider/js/jquery.themepunch.tools.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'libercom/rev-slider/js/jquery.themepunch.revolution.min.js' %}"></script>
+        <!-- SLIDER REVOLUTION 5.0 EXTENSIONS (Load Extensions only on Local File Systems !
+        The following part can be removed on Server for On Demand Loading) -->
+        <script type="text/javascript" src="{% static 'libercom/rev-slider/js/revolution.extension.actions.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'libercom/rev-slider/js/revolution.extension.layeranimation.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'libercom/rev-slider/js/revolution.extension.navigation.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'libercom/rev-slider/js/revolution.extension.parallax.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'libercom/rev-slider/js/revolution.extension.slideanims.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'libercom/rev-slider/js/revolution.extension.video.min.js' %}"></script>
+
+        <script type="text/javascript" src="{% static 'libercom/js/script.js' %}"></script>
+        <script>
+            var tpj=jQuery;
+
+            var revapi2;
+            tpj(document).ready(function() {
+                if(tpj("#rev_slider_2_1").revolution == undefined){
+                    revslider_showDoubleJqueryError("#rev_slider_2_1");
+                }else{
+                    revapi2 = tpj("#rev_slider_2_1").show().revolution({
+                        sliderType:"standard",
+                        jsFileLocation:"js/",
+                        sliderLayout:"auto",
+                        dottedOverlay:"none",
+                        delay:9000,
+                        navigation: {
+                            keyboardNavigation:"off",
+                            keyboard_direction: "horizontal",
+                            mouseScrollNavigation:"off",
+                            mouseScrollReverse:"default",
+                            onHoverStop:"off",
+                            touch:{
+                                touchenabled:"on",
+                                swipe_threshold: 75,
+                                swipe_min_touches: 1,
+                                swipe_direction: "horizontal",
+                                drag_block_vertical: false
+                            }
+                            ,
+                            arrows: {
+                                style:"gyges",
+                                enable:true,
+                                hide_onmobile:true,
+                                hide_under:768,
+                                hide_onleave:true,
+                                hide_delay:200,
+                                hide_delay_mobile:1200,
+                                tmp:'',
+                                left: {
+                                    h_align:"left",
+                                    v_align:"center",
+                                    h_offset:20,
+                                    v_offset:0
+                                },
+                                right: {
+                                    h_align:"right",
+                                    v_align:"center",
+                                    h_offset:20,
+                                    v_offset:0
+                                }
+                            }
+                            ,
+                            bullets: {
+                                enable:true,
+                                hide_onmobile:false,
+                                style:"hesperiden",
+                                hide_onleave:false,
+                                direction:"horizontal",
+                                h_align:"center",
+                                v_align:"bottom",
+                                h_offset:0,
+                                v_offset:20,
+                                space:5,
+                                tmp:''
+                            }
+                        },
+                        responsiveLevels:[1240,1240,778,480],
+                        visibilityLevels:[1240,1240,778,480],
+                        gridwidth:[1920,1024,778,480],
+                        gridheight:[878,768,800,480],
+                        lazyType:"none",
+                        parallax: {
+                            type:"mouse",
+                            origo:"enterpoint",
+                            speed:400,
+                            levels:[1,2,3,4,5,6,7,10,15,20,25,30,35,40,45,55],
+                            disable_onmobile:"on"
+                        },
+                        shadow:0,
+                        spinner:"spinner0",
+                        stopLoop:"off",
+                        stopAfterLoops:-1,
+                        stopAtSlide:-1,
+                        shuffle:"off",
+                        autoHeight:"off",
+                        hideThumbsOnMobile:"off",
+                        hideSliderAtLimit:0,
+                        hideCaptionAtLimit:0,
+                        hideAllCaptionAtLilmit:0,
+                        debugMode:false,
+                        fallbacks: {
+                            simplifyAll:"off",
+                            nextSlideOnWindowFocus:"off",
+                            disableFocusListener:false,
+                        }
+                    });
+                }
+            });	/*ready*/
+            {% if message %}
+                alert("{{ message }}")
+            {% endif %}
+        </script>
+    </body>
+</html>

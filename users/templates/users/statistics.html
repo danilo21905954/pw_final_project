@@ -1,0 +1,110 @@
+{% extends 'users/base.html' %}
+
+{% block main %}
+<!-- Fast passage   -->
+        <div class="biv-location">
+            <span>Estatísticas</span>
+        </div>
+<!-- Fast passage   -->
+
+<!-- Content   -->
+        <div class="biv-panel-content">
+
+            <div class="biv-panel-stat">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="biv-panel-stat-item">
+                            <div class="biv-panel-stat-item-count">{{ contatos }}</div>
+                            <div class="biv-panel-stat-item-title">Contatos</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="biv-panel-stat-item">
+                            <div class="biv-panel-stat-item-count">{{ testemunho }}</div>
+                            <div class="biv-panel-stat-item-title">Testemunhos</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="biv-panel-stat-item">
+                            <div class="biv-panel-stat-item-count">{{ quizz }}</div>
+                            <div class="biv-panel-stat-item-title">Quizzes</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="biv-panel-stat-item">
+                            <div class="biv-panel-stat-item-count">{{ planos }}</div>
+                            <div class="biv-panel-stat-item-title">Planos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chart" class="container"></div>
+        </div>
+<!-- Content   -->
+
+    <script>
+        function make_statement(data){
+            var str = "["
+            data.forEach(d =>
+                str += "'" + d + "',"
+            )
+            str = str.substring(0, str.length - 1);
+            str += "],"
+            return str;
+        }
+
+        function make_url(data_x,data_y,width ,height,str) {
+            return "https://quickchart.io/chart?chart={" +
+                "type: 'bar'," +
+                "data: {" +
+                    "labels:" + make_statement(data_x) +
+                    "datasets: [{" +
+                            "label: '"+ str +"'," +
+                            "data:[" + data_y + "]" +
+                        "}]" +
+                    "}" +
+                "}" +
+                "&width=" + width +
+                "&height=" + height +
+                "&devicePixelRatio=1.0" +
+                "&format=png" +
+                "&version=2.9.3";
+        }
+
+        function  put_chart(url){
+            fetch(url)
+            .then(img => {
+                //console.log(img.url);
+                var tag = document.createElement("img");
+
+                tag.src = img.url;
+                var src = document.querySelector('#chart');
+
+                src.appendChild(tag);
+            })
+        }
+
+        fetch('{% url 'users:statistics_data' %}')
+        .then(response => response.text() )
+        .then(data => {
+            var json = JSON.parse(data);
+
+            //grafico geral
+            var url = make_url(json.geral.x,json.geral.y,"900","300", "Perguntas vs Respostas Certas");
+            put_chart(encodeURI(url));
+
+            var pergunta;
+            for (var i=1; i<11; i++){
+                pergunta = json[("p"+ i.toString())]
+                url = make_url(pergunta["x"],pergunta["y"],"420","300",("Pergunta "+ i.toString()));
+                put_chart(encodeURI(url));
+            }
+        });
+
+    </script>
+{% endblock %}
+
+
+
+

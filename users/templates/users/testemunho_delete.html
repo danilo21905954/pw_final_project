@@ -1,0 +1,30 @@
+{% extends 'users/base.html' %}
+
+{% block main %}
+    <!-- Fast passage   -->
+    <div class="biv-location">
+        <a href="{% url 'users:testemunho' %}">Testemunho</a>
+        <span>Deletar Testemunho</span>
+    </div>
+    <!-- Fast passage   -->
+    
+    <!-- Content   -->
+    <div class="biv-panel-content">
+    
+        <div class="biv-form">
+            <div class="biv-form-title">Deletar Testemunho</div>
+            <div class="biv-form-line"></div>
+            <div class="biv-form-text">
+                <p>O testemunho será removido da base de dados.</p>
+            </div>
+            <div class="biv-form-line"></div>
+            <div class="biv-form-btn-right">
+                <a href="{% url 'users:testemunho-delete-confirmed' testemunho_id %}">Deletar</a>
+            </div>
+        </div>
+    
+    </div>
+    <!-- Content   -->
+{% endblock %}
+
+

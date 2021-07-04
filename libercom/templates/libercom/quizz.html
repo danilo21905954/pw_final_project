@@ -1,0 +1,148 @@
+{%  extends "libercom/base.html" %}
+
+{% block main %}
+    <!-- Start of page breadcrum
+     ============================================= -->
+    <section id="apus-breadscrumb" class="apus-breadscrumb">
+     <div class="container">
+        <div class="row">
+           <div class="wrapper-breads">
+              <div class="breadscrumb-inner">
+                 <ol class="breadcrumb">
+                    <li><a href="{% url 'libercom:home' %}">Home</a>  </li>
+                    <li class="active">Quizz</li>
+                 </ol>
+                 <h2 class="bread-title">Quizz</h2>
+              </div>
+           </div>
+        </div>
+     </div>
+    </section>
+    <!-- End of page breadcrum
+     ============================================= -->
+     <section class="container" id="add_div" >
+
+        <form id="form_add" method="POST" action="{% url 'libercom:quizz' %}">
+            {% csrf_token %}
+            <label for="1">Nome Completo
+                <input type="text" name="name" value="">
+            </label><br>
+
+            <fieldset>
+                <legend style="align-self: center">Teste suas habilidades</legend>
+
+                <p>1- Qual o significado de www?</p>
+                <input type="radio" id="1" name="p1" value="1">
+                <label for="1">world wide web</label><br>
+                <input type="radio" id="2" name="p1" value="2">
+                <label for="2">wide world web</label><br>
+                <input type="radio" id="3" name="p1" value="3">
+                <label for="3">when wide web</label><br>
+                <input type="radio" id="4" name="p1" value="4">
+                <label for="4">what wide web</label>
+                <br><br>
+
+                <p>2- Quem criou o telégrafo?</p>
+                <input type="radio" id="5" name="p2" value="1">
+                <label for="5">Júlio Cezar</label><br>
+                <input type="radio" id="6" name="p2" value="2">
+                <label for="6">Abraham Lincoln</label><br>
+                <input type="radio" id="7" name="p2" value="3">
+                <label for="7">Thomas Edison</label><br>
+                <input type="radio" id="8" name="p2" value="4">
+                <label for="8">Samuel Morse</label>
+                <br><br>
+
+                <p>3- O primeiro protótipo de telefone foi criado por?</p>
+                <input type="radio" id="9" name="p3" value="1">
+                <label for="9">Graham Bell</label><br>
+                <input type="radio" id="10" name="p3" value="2">
+                <label for="10">Guglielmo Marconi</label><br>
+                <input type="radio" id="11" name="p3" value="3">
+                <label for="11">Landell de Moura</label><br>
+                <input type="radio" id="12" name="p3" value="4">
+                <label for="12">Antonio Meucci</label>
+                <br><br>
+
+                <p>4- Quem foi o inventor do rádio?</p>
+                <input type="radio" id="13" name="p4" value="1">
+                <label for="13">Gilberto Gil</label><br>
+                <input type="radio" id="14" name="p4" value="2">
+                <label for="14">Johann-Philipp</label><br>
+                <input type="radio" id="15" name="p4" value="3">
+                <label for="15">Ventura</label><br>
+                <input type="radio" id="16" name="p4" value="4">
+                <label for="16">Antonio Meucci</label>
+                <br><br>
+
+                <p>5- O que significa GPS?</p>
+                <input type="radio" id="17" name="p5" value="1">
+                <label for="17">global positioning system</label><br>
+                <input type="radio" id="18" name="p5" value="2">
+                <label for="18">geral positioning system</label><br>
+                <input type="radio" id="19" name="p5" value="3">
+                <label for="19">general positioning system</label><br>
+                <input type="radio" id="20" name="p5" value="4">
+                <label for="20">universal positioning system. </label>
+                <br><br>
+
+                <p>6- Qual opção esta correcta?</p>
+                <input type="radio" id="21" name="p6" value="1">
+                <label for="21">Thomas Edison foi o inventor da televisão</label><br>
+                <input type="radio" id="22" name="p6" value="2">
+                <label for="22">As antenas de telecomunicações atuam como transmissores de sinal</label><br>
+                <input type="radio" id="23" name="p6" value="3">
+                <label for="23">O palmeiras não tem mundial</label><br>
+                <input type="radio" id="24" name="p6" value="4">
+                <label for="24">O sistema android é um produto da Apple</label>
+                <br><br>
+
+                <p>7- A televisão no Brasil surgiu em?</p>
+                <input type="radio" id="25" name="p7" value="1">
+                <label for="25">1965</label><br>
+                <input type="radio" id="26" name="p7" value="2">
+                <label for="26">2000</label><br>
+                <input type="radio" id="27" name="p7" value="3">
+                <label for="27">1800</label><br>
+                <input type="radio" id="28" name="p7" value="4">
+                <label for="28">1970</label>
+                <br><br>
+
+                <p>8- Qual opção esta correcta?</p>
+                <input type="radio" id="29" name="p8" value="1">
+                <label for="29">A internet surgiu a partir de pesquisas militares no auge da Guerra Fria.</label><br>
+                <input type="radio" id="30" name="p8" value="2">
+                <label for="30">O primeiro protótipo da primeira rede de internet foi a Intra</label><br>
+                <input type="radio" id="31" name="p8" value="3">
+                <label for="31">O Wi-fi foi inventado pelos japoneses</label><br>
+                <input type="radio" id="31" name="p8" value="4">
+                <label for="32">O primeiro computador foi inventado pelos Alemães</label>
+                <br><br>
+
+                <p>9- O que é cabo coaxial?</p>
+                <input type="radio" id="32" name="p9" value="1">
+                <label for="32">Uma espécie de cabo condutor usado para a transmissão de sinais</label><br>
+                <input type="radio" id="33" name="p9" value="2">
+                <label for="33">Cabo utilizado para acabamentos em casas de banho</label><br>
+                <input type="radio" id="34" name="p9" value="3">
+                <label for="34">É utilizado para fins de mecânica industrial</label><br>
+                <input type="radio" id="35" name="p9" value="4">
+                <label for="35">É uma espécie de cabo resistente ao calor utilizado em grandes obras</label>
+                <br><br>
+
+                <p>10- O que significa IP?</p>
+                <input type="radio" id="36" name="p10" value="1">
+                <label for="36">Internet Protocol</label><br>
+                <input type="radio" id="37" name="p10" value="2">
+                <label for="37">Internet Process</label><br>
+                <input type="radio" id="38" name="p10" value="3">
+                <label for="38">Interface Protocol</label><br>
+                <input type="radio" id="39" name="p10" value="4">
+                <label for="39">Internet Program</label>
+                <br><br>
+
+                <input type="submit" value=" submter">
+            </fieldset>
+        </form>
+     </section>
+{% endblock %}

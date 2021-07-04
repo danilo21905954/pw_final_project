@@ -1,0 +1,21 @@
+{% extends "libercom/base.html" %}
+
+{% block main %}
+    <div class="container" id="success_div">
+        <h3 class="success_title">{{ name }} sua nota do Quizz foi {{ nota }}/100</h3>
+        {% if nota <= 40 %}
+            <p>Acho que podemos melhorar essa nota. Tente fazer o teste novamente</p>
+            <a class="home_button" href="{% url 'libercom:quizz' %}">Tentar Novamente</a>
+        {% elif nota <= 70 %}
+            <p>Você foi muito bem, mas acho que pode ser ainda melhor. Tente fazer o teste novamente</p>
+            <a class="home_button" href="{% url 'libercom:quizz' %}">Tentar Novamente</a>
+        {% elif nota <= 95 %}
+            <p>Parabéns pela excelente nota!! Por pouco não acertou todas em. Será que consegue acertar 100%? </p>
+            <a class="home_button" href="{% url 'libercom:quizz' %}">Tentar Novamente</a>
+        {% elif nota == 100 %}
+            <p>Temos um verdadeiro profissional aqui. Isso não representou desafio para você pelo visto.
+            Deixe seu contato conosco para quando tivermos um quizz mais difícil te notificarmos pelo e-mail.</p>
+            <a class="home_button" href="{% url 'libercom:adicionar' %}">Adicionar Contato</a>
+        {% endif %}
+    </div>
+{% endblock %}

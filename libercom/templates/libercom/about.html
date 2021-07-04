@@ -1,0 +1,461 @@
+{% extends "libercom/base.html" %}
+
+{% block main %}
+    {% load static %}
+    <!-- Start of page breadcrum
+    ============================================= -->
+    <section id="apus-breadscrumb" class="apus-breadscrumb">
+     <div class="container">
+        <div class="row">
+           <div class="wrapper-breads">
+              <div class="breadscrumb-inner">
+                 <ol class="breadcrumb">
+                    <li><a href="{% url 'libercom:home' %}">Home</a>  </li>
+                    <li class="active">Sobre</li>
+                 </ol>
+                 <h2 class="bread-title">Sobre</h2>
+              </div>
+           </div>
+        </div>
+     </div>
+    </section>
+    <!-- End of page breadcrum
+    ============================================= -->
+    <!-- Start of who we are
+    ============================================= -->
+    <section id="who-we-are" class="who-we-are-section">
+     <div class="container">
+        <div class="row section-content">
+           <div class="who-we-are-content">
+              <div class="row">
+                 <div class="col-sm-6">
+                    <div class="kc-elm kc-css-545448 kc_col-sm-6 kc_column_inner kc_col-sm-6">
+                       <div class="kc_wrapper kc-col-inner-container">
+                          <div class="kc-elm kc-css-732904 kc-title-wrap  left dark">
+                             <div class="title-wrapper">
+                                <h3 class="kc_title raleway bold"><span>Quem</span> nós somos</h3>
+                             </div>
+                          </div>
+                          <div class="kc-elm kc-css-62333 kc_text_block">
+                             <p>
+                                Fazemos Nosso Melhor Todos Os Dias
+                             </p>
+                          </div>
+                          <div class="kc-elm kc-css-846226 kc_text_block">
+                             <p>
+                                Libercom, empresa brasileira com 21 anos de experiência no mercado de instalação
+                                 manutenção e gestão de serviços de Internet voltada para os segmentos:
+                                 residencial, condominial e corporativo. <br>
+                                 Especialista na utilização e disponibilização de serviços por fibra ótica,
+                                 garantindo dessa forma a todos os seus clientes: maior capacidade de transmissão,
+                                 maior potência do sinal, melhor qualidade de navegação, imunidade a interferências
+                                 eletromagnéticas, transmissões mais seguras, facilidade de instalação e melhor
+                                 custo-benefício.
+                             </p>
+                          </div>
+                          <div class="kc-elm kc-css-20557 kc_text_block">
+                             <p>
+                                Planos de internet :
+                                 <span class="text-theme"><a href="{% url 'libercom:plano' %}">Clique aqui</a></span>
+                             </p>
+                          </div>
+                          <div class="kc-elm kc-css-709533 kc_text_block">
+                             <p>
+                                As violações de segurança estão aumentando, e não são apenas as grandes
+                                 organizações que estão sendo visadas. Todas as empresas devem tomar medidas.
+                             </p>
+                             <ul class="style-ul">
+                                <li>Libercom possui um firewall para sua devida proteção</li>
+                                <li>Oferecemos um roteador no Comodato a todos os nosso clientes</li>
+                             </ul>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <!-- /col-sm-6 -->
+                  {% load static %}
+                 <div class="col-sm-6">
+                    <div class="who-we-are-slide">
+                       <div class="who-we-are-slide-content">
+                          <div class="who-we-are-slide-pic">
+                             <img src="{% static 'libercom/img/imgslide1.jpg' %}" alt="img1">
+                          </div>
+                          <div class="who-we-are-slide-pic">
+                             <img src="{% static 'libercom/img/imgslide2.jpg' %}" alt="img2">
+                          </div>
+                          <div class="who-we-are-slide-pic">
+                             <img src="{% static 'libercom/img/imgslide3.jpg' %}" alt="img3">
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <!-- / -->
+              </div>
+           </div>
+        </div>
+     </div>
+    </section>
+    <!-- End of who we are
+    ============================================= -->
+    <!-- Satrt of count
+    ============================================= -->
+    <section id="love-our-network" class="love-our-network-section v-2">
+     <div class="container">
+        <div class="row section-content">
+           <div class="kc-elm kc-css-152924 kc_row kc_row_inner">
+              <div class="col-sm-3 kc-elm kc-css-96571 kc_col-sm-3 kc_column_inner kc_col-sm-3">
+                 <div class="kc_wrapper kc-col-inner-container">
+                    <div class="kc-elm kc-css-625587 kc_counter_box">
+                       <i class="mn-icon-380 element-icon"></i><span class="counterup">4534</span>
+                       <h4>Clientes</h4>
+                    </div>
+                 </div>
+              </div>
+              <div class="col-sm-3 kc-elm kc-css-280189 kc_col-sm-3 kc_column_inner kc_col-sm-3">
+                 <div class="kc_wrapper kc-col-inner-container">
+                    <div class="kc-elm kc-css-492223 hidden-md hidden-lg"></div>
+                    <div class="kc-elm kc-css-576522 kc_counter_box">
+                       <i class="mn-icon-1103 element-icon"></i>	<span class="counterup">21</span>
+                       <h4>Anos de Experiência</h4>
+                    </div>
+                 </div>
+              </div>
+              <div class="col-sm-3 kc-elm kc-css-354602 kc_col-sm-3 kc_column_inner kc_col-sm-3">
+                 <div class="kc_wrapper kc-col-inner-container">
+                    <div class="kc-elm kc-css-575471 hidden-md hidden-lg"></div>
+                    <div class="kc-elm kc-css-128811 kc_counter_box">
+                       <i class="mn-icon-776 element-icon"></i>	<span class="counterup">45867</span>
+                       <h4>KL de Fibra Óptica</h4>
+                    </div>
+                 </div>
+              </div>
+              <div class="col-sm-3 kc-elm kc-css-470309 kc_col-sm-3 kc_column_inner kc_col-sm-3">
+                 <div class="kc_wrapper kc-col-inner-container">
+                    <div class="kc-elm kc-css-629580 hidden-md hidden-lg"></div>
+                    <div class="kc-elm kc-css-756091 kc_counter_box">
+                       <i class="mn-icon-1225 element-icon"></i>	<span class="counterup">7</span>
+                       <h4>Empresas Parceiras</h4>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+    </section>
+    <!-- End of count
+    ============================================= -->
+    <!-- Start of why choose us
+    ============================================= -->
+    <section id="why-choose" class="why-choose-us">
+     <div class="container">
+        <div class="row section-content">
+           <div class="kc-elm kc-css-725811 kc-title-wrap raleway  dark">
+              <div class="title-wrapper">
+                 <h3 class="kc_title"><span>Porque</span> nos escolher</h3>
+              </div>
+           </div>
+           <div class="kc-elm kc-css-522062 kc_text_block text-center">
+              <p>
+                  Estamos aqui para conectar nossos clientes ao mundo da maneira mais rápida e estável.
+              </p>
+           </div>
+           <!-- /tittle -->
+           <div class="service-box-content">
+              <div class="row">
+                 <div class="col-sm-4">
+                    <div class="kc-elm kc-css-409477 kc_col-sm-4 kc_column_inner kc_col-sm-4 kc-pc-loaded">
+                       <div class="kc_wrapper kc-col-inner-container">
+                          <div class="kc-elm kc-css-510764 hidden-md hidden-lg">
+                          </div>
+                          <div class="widget widget-features-box style2">
+                             <div class="content">
+                                <div class="feature-box">
+                                   <div class="fbox-img">
+                                      <div class="fbox-icon">
+                                         <div class="inner">
+                                            <i class="mn-icon-1104"></i>
+                                         </div>
+                                      </div>
+                                   </div>
+                                   <div class="fbox-content">
+                                      <h3 class="ourservice-heading">Constante Evolução</h3>
+                                      <p class="description">
+                                          Constantemente estamos a aumentar as nossas velocidades, e connosco
+                                          ninguém fica para trás. O seu plano será aumentado também! Temos clientes
+                                          que iniciaram com a gente com um plano de 5 MEGAS e, atualmente, sem pagar
+                                          nem um centavo a mais, tem um plano de 40 MEGAS.
+                                      </p>
+                                   </div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <!-- /col-sm-4 -->
+                 <div class="col-sm-4">
+                    <div class="kc-elm kc-css-409477 kc_col-sm-4 kc_column_inner kc_col-sm-4 kc-pc-loaded">
+                       <div class="kc_wrapper kc-col-inner-container">
+                          <div class="kc-elm kc-css-510764 hidden-md hidden-lg">
+                          </div>
+                          <div class="widget widget-features-box style2">
+                             <div class="content">
+                                <div class="feature-box">
+                                   <div class="fbox-img">
+                                      <div class="fbox-icon">
+                                         <div class="inner">
+                                            <i class="mn-icon-1481"></i>
+                                         </div>
+                                      </div>
+                                   </div>
+                                   <div class="fbox-content">
+                                      <h3 class="ourservice-heading">Custo Benefício</h3>
+                                      <p class="description">
+                                          Sempre procuramos manter nosso custo benefício o mais acessível possível, ou
+                                          seja, mantendo a taxa de instalação a um preço muito a baixo da média e
+                                          oferencendo mais MEGAS com um custo menor.
+                                      </p>
+                                   </div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <!-- /col-sm-4 -->
+                 <div class="col-sm-4">
+                    <div class="kc-elm kc-css-409477 kc_col-sm-4 kc_column_inner kc_col-sm-4 kc-pc-loaded">
+                       <div class="kc_wrapper kc-col-inner-container">
+                          <div class="kc-elm kc-css-510764 hidden-md hidden-lg">
+                          </div>
+                          <div class="widget widget-features-box style2">
+                             <div class="content">
+                                <div class="feature-box">
+                                   <div class="fbox-img">
+                                      <div class="fbox-icon">
+                                         <div class="inner">
+                                            <i class="mn-icon-1051"></i>
+                                         </div>
+                                      </div>
+                                   </div>
+                                   <div class="fbox-content">
+                                      <h3 class="ourservice-heading">Atendimento</h3>
+                                      <p class="description">
+                                          Contamos com o dobro da equipe necessária para manter
+                                          nossas estruturas. Aqui na Libercom ninguém espera para ser atendido.
+                                          Ainda contamos com uma grande variedade de canais para escolher
+                                          qual o melhor para você.
+                                      </p>
+                                   </div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <!-- /col-sm-4 -->
+              </div>
+              <!-- /row -->
+           </div>
+        </div>
+     </div>
+    </section>
+    <!-- End of why choose us
+    ============================================= -->
+    <!-- Start of our client say
+    ============================================= -->
+    <section id="client-say" class="client-say-section">
+     <div class="container">
+        <div class="row section-content">
+           <div class="kc-elm  kc-title-wrap raleway  dark">
+              <div class="title-wrapper">
+                 <h3 class="kc_title"><span>O que nossos</span> clientes falam</h3>
+              </div>
+           </div>
+           <!-- /title -->
+           <div class="client-say-content">
+              <div class="client-say-slide widget widget-testimonials style-layout-1">
+                 <div style="margin-top: 30px" class="testimonials-body">
+                     {% for foo in testemunho %}
+                         {% if foo.enable %}
+                            <div class="testimonials-profile style1">
+                                <div class="media">
+                                    <div class="media-body">
+                                        <div class="testimonial-meta ">
+                                            <div class="info">
+                                                <h3 class="name-client"> {{ foo.name }} {{ foo.apelido }}</h3>
+                                                {% if foo.voto == 1 %}
+                                                    <span class="job">⭐</span>
+                                                {% elif foo.voto == 2 %}
+                                                    <span class="job">⭐⭐</span>
+                                                {% elif foo.voto == 3 %}
+                                                    <span class="job">⭐⭐⭐</span>
+                                                {% elif foo.voto == 4 %}
+                                                    <span class="job">⭐⭐⭐⭐</span>
+                                                {% elif foo.voto == 5 %}
+                                                    <span class="job">⭐⭐⭐⭐⭐</span>
+                                                {% endif %}
+                                            </div>
+                                            <div class="description">
+                                                {{ foo.testemunho }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="media-right">
+                                        <div class="testimonial-avatar ">
+                                            <div class="image-wrapper image-loaded">
+                                                <img src="{% static 'libercom/img/user1.jpg' %}" data-src="assets/img/user1.jpg" alt="" class="unveil-image" data-pin-nopin="true">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         {% endif %}
+                     {% endfor %}
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+    </section>
+    <!-- End of of our client say
+    ============================================= -->
+    <!-- Start of Our mission
+    ============================================= -->
+    <section id="our-mission" class="our-mission-section">
+     <div class="container">
+        <div class="row section-content">
+           <div class="our-mission-content">
+              <div class="row">
+                 <div class="col-sm-4">
+                    <div class="kc-elm  kc_col-sm-4 colmd4 kc_column_inner kc_col-sm-4">
+                       <div class="kc_wrapper kc-col-inner-container">
+                          <div class="kc-elm kc-css-415986 kc-feature-boxes kc-fb-layout-2">
+                             <figure class="content-image"><img src="{% static 'libercom/img/work1.jpg' %}" alt="">
+                             </figure>
+                             <div class="content-title">Nossa Missão</div>
+                             <div class="content-desc">
+                                 Nossa missão é deixar todos nosso clientes felizes e sem preocupações com
+                                a sua internet.
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <!-- // -->
+                 <div class="col-sm-4">
+                    <div class="kc-elm  colmd4 kc_col-sm-4 kc_column_inner kc_col-sm-4">
+                       <div class="kc_wrapper kc-col-inner-container">
+                          <div class="kc-elm kc-css-415986 kc-feature-boxes kc-fb-layout-2">
+                             <figure class="content-image"><img src="{% static 'libercom/img/work2.jpg' %}" alt="">
+                             </figure>
+                             <div class="content-title">Nossa tecnologia</div>
+                             <div class="content-desc">
+                                 Buscamos diariamente as melhores tecnologias disponíveis no mercado para
+                                 tornar a sua internet a melhor possível.
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <!-- // -->
+                 <div class="col-sm-4">
+                    <div class="kc-elm colmd4 kc_col-sm-4 kc_column_inner kc_col-sm-4">
+                       <div class="kc_wrapper kc-col-inner-container">
+                          <div class="kc-elm kc-css-415986 kc-feature-boxes kc-fb-layout-2">
+                             <figure class="content-image"><img src="{% static 'libercom/img/work3.jpg' %}" alt="">
+                             </figure>
+                             <div class="content-title">Nossa Solução</div>
+                             <div class="content-desc">
+                                 A nossa solução é oferecer um serviço de excelência, bem como a melhor tecnologia,
+                                 a Fibra Óptica.
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <!-- // -->
+              </div>
+           </div>
+        </div>
+     </div>
+    </section>
+    <!-- End of Our mission
+    ============================================= -->
+    <!-- Start of our team
+    ============================================= -->
+    <section id="our-team" class="our-team-section">
+        <div class="container">
+            <div class="row section-content">
+               <div class="kc-elm  kc-title-wrap raleway  dark">
+                  <div class="title-wrapper">
+                     <h3 class="kc_title"><span>Nosso</span> time</h3>
+                  </div>
+               </div>
+               <div class="kc-elm kc-css-522062 kc_text_block text-center">
+                  <p>
+                      Constuimos todos os dias uma equipe de profissionais para te atender da melhor forma possível.
+                  </p>
+               </div>
+               <!-- /tittle -->
+               <div class="our-team-content">
+                  <div class="row">
+                     <div class="col-sm-3">
+                        <div class="kc-elm  kc_col-sm-3 colmd3 kc_column_inner kc_col-sm-3 text-center">
+                           <div class="kc_wrapper kc-col-inner-container">
+                              <div class="kc-elm kc-css-458850 kc-team kc-team-1">
+                                 <figure class="content-image">
+                                    <img src="{% static 'libercom/img/user1.jpg' %}" alt="">
+                                 </figure>
+                                 <div class="content-title">Jhon Parker</div>
+                                 <div class="content-subtitle">(Founder)</div>
+                                 <div class="content-socials">
+                                    <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                                    <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                                    <a href="#" target="_blank"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+        </div>
+    </section>
+    <!-- End  of our team
+    ============================================= -->
+    <!-- Start of partner slide
+    ============================================= -->
+    <div id="partner-slide" class="partner-slide-section">
+     <div class="container">
+        <div class="row section-content">
+           <div class="partner-sllide-content">
+              <div class="partner-img">
+                 <img src="{% static 'libercom/img/6.png' %}" alt="">
+              </div>
+              <div class="partner-img">
+                 <img src="{% static 'libercom/img/2.png' %}" alt="">
+              </div>
+              <div class="partner-img">
+                 <img src="{% static 'libercom/img/7.png' %}" alt="">
+              </div>
+              <div class="partner-img">
+                 <img src="{% static 'libercom/img/3.png' %}" alt="">
+              </div>
+              <div class="partner-img">
+                 <img src="{% static 'libercom/img/0.png' %}" alt="">
+              </div>
+              <div class="partner-img">
+                 <img src="{% static 'libercom/img/5.png' %}" alt="">
+              </div>
+           </div>
+        </div>
+     </div>
+    </div>
+    <!-- End of partner slide
+    ============================================= -->
+{% endblock %}
+
+
